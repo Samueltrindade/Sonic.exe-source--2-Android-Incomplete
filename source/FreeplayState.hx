@@ -25,7 +25,7 @@ class FreeplayState extends MusicBeatState // REWRITE FREEPLAY!?!?!? HELL YEA!!!
 
 	var curSelected:Int = 0;
 
-	var songArray:Array<String> = ["endless", 'cycles', "milk", "sunshine", 'faker', 'black-sun', "chaos"];
+	var songArray:Array<String> = ["endlo", 'cyclo', "milki", "sansshine", 'fake', 'black-sus', "caos"];
 
 	var boxgrp:FlxTypedSpriteGroup<FlxSprite>;
 
@@ -172,9 +172,9 @@ class FreeplayState extends MusicBeatState // REWRITE FREEPLAY!?!?!? HELL YEA!!!
 	
 				switch (songArray[curSelected]) // Some charts don't include -hard in their file name so i decided to get focken lazy.			{
 				{
-				case "milk":
+				case "milki":
 					PlayState.SONG = Song.loadFromJson('milk', 'milk');
-				case "sunshine":
+				case "sansshine":
 					PlayState.SONG = Song.loadFromJson('sunshine', 'sunshine');
 				default:
 					PlayState.SONG = Song.loadFromJson(songArray[curSelected].toLowerCase() + '-hard', songArray[curSelected].toLowerCase());
