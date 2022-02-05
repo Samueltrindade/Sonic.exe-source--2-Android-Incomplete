@@ -36,7 +36,7 @@ class StoryMenuState extends MusicBeatState
 
 	var selection:Bool = false;
 
-	var songArray = ['too-slow', 'you-cant-run', 'triple-trouble'];
+	var songArray = ['mo-lento', 'tu-n-vai-fugir', 'trepa-trouxa'];
 
 	//var staticscreen:FlxSprite;
 	var portrait:FlxSprite;
@@ -46,9 +46,9 @@ class StoryMenuState extends MusicBeatState
 		switch (FlxG.save.data.storyProgress)
 		{
 			case 1:
-				songArray = ['too-slow', 'you-cant-run'];
+				songArray = ['mo-lento', 'tu-n-vai-fugir'];
 			case 2:
-				songArray = ['too-slow', 'you-cant-run', 'triple-trouble'];
+				songArray = ['mo-lento', 'tu-n-vai-fugir', 'trepa-trouxa'];
 		}
 
 		FlxG.sound.playMusic(Paths.music('storymodemenumusic'));
@@ -280,7 +280,7 @@ class StoryMenuState extends MusicBeatState
 
 				if (FlxG.save.data.storyProgress == 0)
 				{
-					PlayState.storyPlaylist = ['too-slow', 'you-cant-run', 'triple-trouble'];
+					PlayState.storyPlaylist = ['mo-lento', 'tu-n-vai-fugir', 'trepa-trouxa'];
 					PlayState.isStoryMode = true;
 					switch (curdiff)
 					{
@@ -316,9 +316,9 @@ class StoryMenuState extends MusicBeatState
 					PlayState.isStoryMode = false;
 					LoadingState.loadAndSwitchState(new PlayState());
 				}
-				if (FlxG.save.data.storyProgress == 1 && songArray[real] == 'you-cant-run')
+				if (FlxG.save.data.storyProgress == 1 && songArray[real] == 'mo-lento')
 				{
-					PlayState.storyPlaylist = ['you-cant-run', 'triple-trouble'];
+					PlayState.storyPlaylist = ['tu-n-vai-fugir', 'trepa-trouxa'];
 					PlayState.isStoryMode = true;
 					curDifficulty = '-hard';
 
@@ -328,7 +328,7 @@ class StoryMenuState extends MusicBeatState
 					PlayState.storyWeek = 1;
 				}
 
-				if (songArray[real] == 'too-slow')
+				if (songArray[real] == 'mo-lento)
 				{
 					new FlxTimer().start(1, function(tmr:FlxTimer)
 						{
