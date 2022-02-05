@@ -48,44 +48,44 @@ class Ratings
                 switch(i)
                 {
                     case 0:
-                        ranking += " AAAAA";
+                        ranking += " QUE GIGA PRO";
                     case 1:
-                        ranking += " AAAA:";
+                        ranking += " Que Mega Pro:";
                     case 2:
-                        ranking += " AAAA.";
+                        ranking += " Que pro en 3D.";
                     case 3:
-                        ranking += " AAAA";
+                        ranking += " Que pro en hd";
                     case 4:
-                        ranking += " AAA:";
+                        ranking += " Que fino:";
                     case 5:
-                        ranking += " AAA.";
+                        ranking += " Que troll.";
                     case 6:
-                        ranking += " AAA";
+                        ranking += " Que old";
                     case 7:
-                        ranking += " AA:";
+                        ranking += " Que humano:";
                     case 8:
-                        ranking += " AA.";
+                        ranking += " Sla kek.";
                     case 9:
-                        ranking += " AA";
+                        ranking += " Olha so";
                     case 10:
-                        ranking += " A:";
+                        ranking += " Que pro:";
                     case 11:
-                        ranking += " A.";
+                        ranking += " Que bizzaro.";
                     case 12:
-                        ranking += " A";
+                        ranking += " Que estranho";
                     case 13:
-                        ranking += " B";
+                        ranking += " Que noob";
                     case 14:
-                        ranking += " C";
+                        ranking += " Que mega noob";
                     case 15:
-                        ranking += " D";
+                        ranking += " Que giga noob";
                 }
                 break;
             }
         }
 
         if (accuracy == 0)
-            ranking = "N/A";
+            ranking = "Sem resultado";
 		else if(FlxG.save.data.botplay && !PlayState.loadRep)
 			ranking = "BotPlay";
 
@@ -142,10 +142,10 @@ class Ratings
         return
          (FlxG.save.data.npsDisplay ?																							// NPS Toggle
          "NPS: " + nps + " (Max " + maxNPS + ")" + (!PlayStateChangeables.botPlay || PlayState.loadRep ? " | " : "") : "") +								// 	NPS
-         (!PlayStateChangeables.botPlay || PlayState.loadRep ? "Pontuação:" + (Conductor.safeFrames != 10 ? score + " (" + scoreDef + ")" : "" + score) + 		// Score
+         (!PlayStateChangeables.botPlay || PlayState.loadRep ? "Pontin:" + (Conductor.safeFrames != 10 ? score + " (" + scoreDef + ")" : "" + score) + 		// Score
          (FlxG.save.data.accuracyDisplay ?																						// Accuracy Toggle
          " | Erros:" + PlayState.misses + 																				// 	Misses/Combo Breaks
-         " | Precisão:" + (PlayStateChangeables.botPlay && !PlayState.loadRep ? "N/A" : HelperFunctions.truncateFloat(accuracy, 2) + " %") +  				// 	Accuracy
+         " | Nota de matemática:" + (PlayStateChangeables.botPlay && !PlayState.loadRep ? "Sem resultado" : HelperFunctions.truncateFloat(accuracy, 2) + " %") +  				// 	Accuracy
          " | " + GenerateLetterRank(accuracy) : "") : ""); 																// 	Letter Rank
     }
 }
